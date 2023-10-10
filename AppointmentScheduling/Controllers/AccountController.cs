@@ -34,7 +34,7 @@ namespace AppointmentScheduling.Controllers
                 var result= await _signInManager.PasswordSignInAsync(model.Email,model.Password,model.RememberMe,false);
                 if(result.Succeeded)
                 {
-                    return RedirectToAction("index", "Home");
+                    return RedirectToAction("index", "Appointment");
                 }
                 ModelState.AddModelError("", "Invalid login Attempt");
             }
